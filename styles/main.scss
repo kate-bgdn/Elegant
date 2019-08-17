@@ -236,3 +236,28 @@ section {
     }
 }
 
+.gallery {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    div {
+        display: inline-block;
+        width: 25%;
+        padding: 1px;
+        margin-bottom: -5px;
+        box-sizing: border-box;
+        img{
+            width: 100%;
+        }
+        @include max-screen(768px) {
+            width: 50%;
+        }
+        @include max-screen(425px) {
+            width: 100%;
+        }
+    }
+    div.person{
+
+    }
+}
+
