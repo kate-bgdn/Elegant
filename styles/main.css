@@ -15,15 +15,14 @@
   font-family: 'OpenSansSemiBold';
   src: url("fonts/OpenSansSemiBold.eot");
   src: url("fonts/OpenSansSemiBold.eot") format("embedded-opentype"), url("fonts/OpenSansSemiBold.woff2") format("woff2"), url("fonts/OpenSansSemiBold.woff") format("woff"), url("fonts/OpenSansSemiBold.ttf") format("truetype"), url("fonts/OpenSansSemiBold.svg#OpenSansSemiBold") format("svg"); }
-section div a {
+section div a, .content .story .description a, .content div a {
   display: inline-block;
-  width: 218px;
-  text-align: center;
   margin: auto;
   border: 1px #021725 solid;
   text-decoration: none;
   color: #021725;
-  padding: 22px;
+  padding: 17px 30px;
+  cursor: pointer;
   font-family: 'OpenSansLight';
   font-size: 14px; }
 
@@ -49,7 +48,7 @@ section div a {
   margin: auto; }
 
 h2 {
-  color: #021725;
+  color: #505d68;
   font-size: 44px;
   text-align: center; }
   @media screen and (max-width: 425px) {
@@ -63,7 +62,14 @@ h3 {
 
 h4 {
   font-family: 'OpenSansRegular';
-  font-size: 21px; }
+  font-size: 21px;
+  padding: 0 10px; }
+
+h5 {
+  font-family: "OpenSansRegular";
+  font-size: 30px;
+  color: #505d68;
+  margin-bottom: 40px; }
 
 p {
   font-family: 'OpenSansLight';
@@ -191,7 +197,44 @@ section div {
     font-size: 13px;
     text-align: left;
     padding: 35px 10px 0; }
-  .content .person h4 {
-    padding: 0 10px; }
+.content .story {
+  display: flex;
+  flex-flow: row;
+  margin-bottom: 87px; }
+  @media screen and (max-width: 768px) {
+    .content .story {
+      flex-flow: column;
+      align-items: center; } }
+  @media screen and (max-width: 768px) {
+    .content .story img {
+      width: 300px; } }
+  .content .story .description {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    padding: 40px;
+    background: #f9f9f9; }
+    @media screen and (max-width: 768px) {
+      .content .story .description {
+        width: 220px; } }
+    @media screen and (max-width: 768px) {
+      .content .story .description h5 {
+        font-size: 26px; } }
+    .content .story .description p {
+      font-size: 16px;
+      color: #505d68;
+      text-align: left;
+      margin-bottom: 50px; }
+      @media screen and (max-width: 425px) {
+        .content .story .description p {
+          font-size: 13px; } }
+    .content .story .description .date {
+      font-family: 'OpenSansRegular';
+      font-size: 13px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #505d68; }
+    .content .story .description a {
+      margin-left: 0; }
 
 /*# sourceMappingURL=main.css.map */

@@ -41,7 +41,9 @@
 
 @import "burger.css";
 $main_color: #021725;
+$text-color: #505d68;
 $brand_color: #d4af37;
+$bg-light-gray: #f9f9f9;
 
 
 @mixin transform($deg) {
@@ -63,13 +65,12 @@ $brand_color: #d4af37;
 
 %link {
     display: inline-block;
-    width: 240px - 22px;
-    text-align: center;
     margin: auto;
     border: 1px $main_color solid;
     text-decoration: none;
     color: $main_color;
-    padding: 22px;
+    padding: 17px 30px;
+    cursor: pointer;
     font: {
         family: 'OpenSansLight';
         size: 14px;
@@ -101,7 +102,7 @@ $brand_color: #d4af37;
 }
 
 h2 {
-    color: $main_color;
+    color: $text-color;
     font-size: 44px;
     text-align: center;
     @include max-screen(425px) {
@@ -120,6 +121,16 @@ h4 {
         family: 'OpenSansRegular';
         size: 21px;
     }
+    padding: 0 10px;
+}
+
+h5 {
+    font: {
+        family: "OpenSansRegular";
+        size: 30px;
+    }
+    color: $text-color;
+    margin-bottom: 40px;
 }
 
 p{
@@ -262,16 +273,13 @@ section {
             width: 100%;
         }
     }
-    div.person{
-
-    }
 }
 
 .content {
     .person {
         display: inline-block;
         width: 240px;
-        background: #f9f9f9;
+        background: $bg-light-gray;
         margin: 2px;
         @include max-screen(768px) {
             width: 60%;
@@ -292,8 +300,66 @@ section {
             text-align: left;
             padding: 35px 10px 0;
         }
-        h4 {
-            padding: 0 10px;
+    }
+
+    .story {
+        display: flex;
+        flex-flow: row;
+        margin-bottom: 87px;
+        @include max-screen(768px) {
+            flex-flow: column;
+            align-items: center;
+        }
+        img {
+            @include max-screen(768px){
+                width: 300px;
+            }
+        }
+        .description {
+            display: flex;
+            flex-flow: column;
+            justify-content: flex-start;
+            padding: 40px;
+            background: $bg-light-gray;
+            @include max-screen(768px){
+                width: 300px - 80px;
+            }
+            h5 {
+                @include max-screen(768px){
+                    font-size: 26px;
+                }
+            }
+
+            p{
+                font-size: 16px;
+                color: $text-color;
+                text-align: left;
+                margin-bottom: 50px;
+                @include max-screen(425px) {
+                    font-size: 13px;
+                }
+            }
+            .date {
+                font:{
+                    family: 'OpenSansRegular';
+                    size: 13px;
+                    weight: bold;
+                }
+                text-transform: uppercase;
+                color: $text-color;
+            }
+            a{
+                @extend %link;
+                margin-left: 0;
+            }
+
+        }
+
+    }
+    div {
+        a {
+            @extend %link;
         }
     }
 }
+
