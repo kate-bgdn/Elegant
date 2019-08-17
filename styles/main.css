@@ -61,6 +61,10 @@ h3 {
   text-transform: uppercase;
   font-size: 13px; }
 
+h4 {
+  font-family: 'OpenSansRegular';
+  font-size: 21px; }
+
 p {
   font-family: 'OpenSansLight';
   font-size: 18px;
@@ -165,5 +169,29 @@ section div {
     @media screen and (max-width: 425px) {
       .gallery div {
         width: 100%; } }
+
+.content .person {
+  display: inline-block;
+  width: 240px;
+  background: #f9f9f9;
+  margin: 2px; }
+  @media screen and (max-width: 768px) {
+    .content .person {
+      width: 60%; } }
+  @media screen and (max-width: 425px) {
+    .content .person {
+      width: 80%; } }
+  .content .person img {
+    width: 100%; }
+  .content .person h3 {
+    text-align: left;
+    padding: 20px 10px;
+    margin: 0; }
+  .content .person p {
+    font-size: 13px;
+    text-align: left;
+    padding: 35px 10px 0; }
+  .content .person h4 {
+    padding: 0 10px; }
 
 /*# sourceMappingURL=main.css.map */

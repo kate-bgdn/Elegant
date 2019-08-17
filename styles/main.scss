@@ -115,6 +115,12 @@ h3 {
     font-size: 13px;
 }
 
+h4 {
+    font: {
+        family: 'OpenSansRegular';
+        size: 21px;
+    }
+}
 
 p{
     font:{
@@ -261,3 +267,33 @@ section {
     }
 }
 
+.content {
+    .person {
+        display: inline-block;
+        width: 240px;
+        background: #f9f9f9;
+        margin: 2px;
+        @include max-screen(768px) {
+            width: 60%;
+        }
+        @include max-screen(425px) {
+            width: 80%;
+        }
+        img{
+            width: 100%;
+        }
+        h3 {
+            text-align: left;
+            padding: 20px 10px;
+            margin: 0;
+        }
+        p{
+            font-size: 13px;
+            text-align: left;
+            padding: 35px 10px 0;
+        }
+        h4 {
+            padding: 0 10px;
+        }
+    }
+}
