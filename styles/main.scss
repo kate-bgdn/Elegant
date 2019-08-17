@@ -1,0 +1,175 @@
+@font-face {
+    font-family: 'OpenSansLight';
+    src: url('fonts/OpenSansLight.eot');
+    src: url('fonts/OpenSansLight.eot') format('embedded-opentype'),
+    url('fonts/OpenSansLight.woff2') format('woff2'),
+    url('fonts/OpenSansLight.woff') format('woff'),
+    url('fonts/OpenSansLight.ttf') format('truetype'),
+    url('fonts/OpenSansLight.svg#OpenSansLight') format('svg');
+}
+
+@font-face {
+    font-family: 'OpenSansLightItalic';
+    src: url('fonts/OpenSansLightItalic.eot');
+    src: url('fonts/OpenSansLightItalic.eot') format('embedded-opentype'),
+    url('fonts/OpenSansLightItalic.woff2') format('woff2'),
+    url('fonts/OpenSansLightItalic.woff') format('woff'),
+    url('fonts/OpenSansLightItalic.ttf') format('truetype'),
+    url('fonts/OpenSansLightItalic.svg#OpenSansLightItalic') format('svg');
+}
+
+@font-face {
+    font-family: 'OpenSansRegular';
+    src: url('fonts/OpenSansRegular.eot');
+    src: url('fonts/OpenSansRegular.eot') format('embedded-opentype'),
+    url('fonts/OpenSansRegular.woff2') format('woff2'),
+    url('fonts/OpenSansRegular.woff') format('woff'),
+    url('fonts/OpenSansRegular.ttf') format('truetype'),
+    url('fonts/OpenSansRegular.svg#OpenSansRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'OpenSansSemiBold';
+    src: url('fonts/OpenSansSemiBold.eot');
+    src: url('fonts/OpenSansSemiBold.eot') format('embedded-opentype'),
+    url('fonts/OpenSansSemiBold.woff2') format('woff2'),
+    url('fonts/OpenSansSemiBold.woff') format('woff'),
+    url('fonts/OpenSansSemiBold.ttf') format('truetype'),
+    url('fonts/OpenSansSemiBold.svg#OpenSansSemiBold') format('svg');
+}
+
+
+@import "burger.css";
+$main_color: #021725;
+$brand_color: #d4af37;
+
+
+@mixin transform($deg) {
+    -webkit-transform: $deg;
+    -ms-transform: $deg;
+    transform: $deg;
+}
+
+@mixin transition($time) {
+    -webkit-transition: all $time;
+    transition: all $time;
+}
+
+@mixin max-screen($res) {
+    @media screen and (max-width: $res) {
+        @content;
+    }
+}
+
+
+
+/*@include transform(rotate(0deg))
+  @include transition(0.5s)
+@include max-screen(768px) {
+      font-size: 21px;
+    }
+*/
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'OpenSansSemiBold', sans-serif;
+}
+
+.container {
+    max-width: 1185px - 30px;
+    padding: 0 15px;
+    margin: auto;
+}
+
+.content {
+    max-width: 770px - 20px;
+    padding: 80px 10px;
+    margin: auto;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        .navBurger {
+            cursor: pointer;
+            z-index: 4;
+            @include max-screen(425px) {
+                top: 15px;
+            }
+        }
+        .overlay{
+            a {
+                text-decoration: none;
+                text-transform: uppercase;
+                color: #ffffff;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+        }
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #ffffff;
+            font-size: 25px;
+            position: relative;
+            top: 5px;
+            font-family: 'OpenSansLight', sans-serif;
+            font-weight: 700;
+            letter-spacing: 2px;
+            @include max-screen(768px){
+                font-size: 15px;
+                top: 25px;
+            }
+            @include max-screen(425px) {
+                top: 12px;
+            }
+            img {
+                width: 44px;
+                position: relative;
+                top: 12px;
+                z-index: 0;
+                @include max-screen(768px){
+                    width: 20px;
+                    top: 4px;
+                }
+                @include max-screen(500px) {
+                    max-width: 50px;
+                }
+            }
+
+        }
+    }
+}
+
+
+
+.banner {
+    img{
+        width: 100%;
+
+    }
+    h1 {
+        font:{
+            family: OpenSansLight;
+            size: 5vw;
+            weight: normal;
+        }
+        position: absolute;
+        z-index: 2;
+        top: 22vw;
+        color: #ffffff;
+        text-align: center;
+        width: 98%;
+        @include max-screen(500px) {
+            font-size: 30px;
+        }
+        span {
+            font-family: OpenSansLightItalic, sans-serif;
+        }
+    }
+}
+
