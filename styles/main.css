@@ -258,4 +258,23 @@ section div {
     .content .contact div .title {
       margin-bottom: 50px; }
 
+footer {
+  background: #eeeeee;
+  padding: 35px 0; }
+  footer .content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0; }
+    @media screen and (max-width: 700px) {
+      footer .content {
+        flex-flow: column;
+        align-items: center; } }
+    footer .content p {
+      font-size: 16px;
+      margin: 0; }
+      @media screen and (max-width: 700px) {
+        footer .content p {
+          text-align: center;
+          margin-bottom: 20px; } }
+
 /*# sourceMappingURL=main.css.map */
