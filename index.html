@@ -5,10 +5,82 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles/style.sass">
+    <title>Elegant</title>
+
+    <link rel="stylesheet" href="styles/main.css">
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
 </head>
 <body>
+<header>
+
+
+    <div class="container">
+        <a href="#" title="Home">
+            <img src="images/header-logo.png" alt="">
+            elegant
+        </a>
+
+
+
+
+
+
+        <div class="overlay">
+
+            <nav class="overlayMenu">
+                <ul  role="menu">
+                    <li>
+                        <a href="#about" target="_blank"  role="menuitem">About</a>
+                    </li>
+                    <li>
+                        <a href="#work" target="_blank"  role="menuitem">Work</a>
+                    </li>
+                    <li>
+                        <a href="#staff" target="_blank"  role="menuitem">Staff</a>
+                    </li>
+                    <li>
+                        <a href="#blog" target="_blank"  role="menuitem">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#contacts" target="_blank"  role="menuitem">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="navBurger" role="navigation" id="navToggle"><span class="menu">menu</span></div>
+
+    </div>
+
+</header>
+
+
+
+
+<div class="banner">
+    <img src="images/header-bg.png" alt="">
+    <h1>Say <span>Haloa</span> to your Portfolio</h1>
+</div>
+
+
+
+
+
+<script>
+    $("#navToggle").click(function() {
+        $(this).toggleClass("active");
+        $(".overlay").toggleClass("open");
+        // this line ▼ prevents content scroll-behind
+        $("body").toggleClass("locked");
+    });
+</script>
+
+
+
 
 </body>
 </html>
