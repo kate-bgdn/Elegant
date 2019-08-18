@@ -276,6 +276,60 @@ header {
     .content .contact div .title {
       margin-bottom: 50px; }
 
+.services {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  border: none;
+  padding: 0;
+  margin: 0; }
+  @media screen and (max-width: 950px) {
+    .services {
+      flex-flow: column;
+      align-items: center; } }
+  .services div {
+    width: 50%;
+    background: #f9f9f9;
+    box-sizing: border-box; }
+    @media screen and (max-width: 950px) {
+      .services div {
+        width: 100%; } }
+    .services div img {
+      width: 100%;
+      height: 100%; }
+    .services div h5 {
+      margin: 48px 40px 55px;
+      font-size: 45px; }
+    .services div div {
+      margin: 0 40px;
+      display: flex;
+      width: 90%;
+      box-sizing: border-box;
+      flex-flow: row wrap; }
+      .services div div p {
+        padding-right: 60px;
+        padding-bottom: 30px;
+        width: 215px;
+        line-height: 30px; }
+        @media screen and (max-width: 1223px) {
+          .services div div p {
+            font-size: 13px;
+            line-height: 16px;
+            width: 120px;
+            padding-right: 40px; } }
+        @media screen and (max-width: 950px) {
+          .services div div p {
+            padding-right: 60px;
+            padding-bottom: 30px;
+            width: 215px;
+            line-height: 30px; } }
+        @media screen and (max-width: 615px) {
+          .services div div p {
+            font-size: 14px;
+            line-height: 20px;
+            width: 150px;
+            padding-right: 40px; } }
+
 footer {
   background: #eeeeee;
   padding: 35px 0; }
