@@ -414,7 +414,70 @@ header {
             }
         }
     }
+    .rectangle {
+        margin-bottom: 75px;
+        display: flex;
+        flex-flow: row wrap;
+        @include max-screen(720px){
+            flex-flow: column;
+            align-items: center;
+        }
+
+        .picture, .gray {
+            @include max-screen(720px) {
+                width: 300px;
+            }
+        }
+        .picture{
+            max-width: 400px;
+            img{
+                width: 100%;
+            }
+        }
+        .gray{
+            background: $bg-light-gray;
+            max-width: 400px;
+            padding: 45px;
+            box-sizing: border-box;
+            p{
+                text-align: left;
+            }
+        }
+        .yellow, .black{
+            padding: 80px 30px 30px;
+            box-sizing: border-box;
+            span{
+                color: #ffffff;
+                max-width: 230px;
+                text-align: left;
+                font-family: 'OpenSansRegular', sans-serif;
+                font-size: 20px;
+            }
+            :after {
+                content: '';
+                display: inline-block;
+                border-top: #ffffff solid 3px;
+                width: 30px;
+                position: relative;
+                top: -80px;
+                left: -80px;
+            }
+
+        }
+        .yellow{
+            width: 300px;
+            background: $brand_color;
+        }
+        .black{
+            width: 300px;
+            background: black;
+            :after {
+                left: -195px;
+            }
+        }
+    }
 }
+
 
 .services {
     display: flex;

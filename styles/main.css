@@ -275,6 +275,53 @@ header {
       margin-bottom: 0; }
     .content .contact div .title {
       margin-bottom: 50px; }
+.content .rectangle {
+  margin-bottom: 75px;
+  display: flex;
+  flex-flow: row wrap; }
+  @media screen and (max-width: 720px) {
+    .content .rectangle {
+      flex-flow: column;
+      align-items: center; } }
+  @media screen and (max-width: 720px) {
+    .content .rectangle .picture, .content .rectangle .gray {
+      width: 300px; } }
+  .content .rectangle .picture {
+    max-width: 400px; }
+    .content .rectangle .picture img {
+      width: 100%; }
+  .content .rectangle .gray {
+    background: #f9f9f9;
+    max-width: 400px;
+    padding: 45px;
+    box-sizing: border-box; }
+    .content .rectangle .gray p {
+      text-align: left; }
+  .content .rectangle .yellow, .content .rectangle .black {
+    padding: 80px 30px 30px;
+    box-sizing: border-box; }
+    .content .rectangle .yellow span, .content .rectangle .black span {
+      color: #ffffff;
+      max-width: 230px;
+      text-align: left;
+      font-family: 'OpenSansRegular', sans-serif;
+      font-size: 20px; }
+    .content .rectangle .yellow :after, .content .rectangle .black :after {
+      content: '';
+      display: inline-block;
+      border-top: #ffffff solid 3px;
+      width: 30px;
+      position: relative;
+      top: -80px;
+      left: -80px; }
+  .content .rectangle .yellow {
+    width: 300px;
+    background: #d4af37; }
+  .content .rectangle .black {
+    width: 300px;
+    background: black; }
+    .content .rectangle .black :after {
+      left: -195px; }
 
 .services {
   display: flex;
