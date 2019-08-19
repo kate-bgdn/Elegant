@@ -19,13 +19,17 @@
 .content div a, .content .story .description a {
   display: inline-block;
   margin: auto;
-  border: 1px #021725 solid;
+  border: 1px transparent solid;
   text-decoration: none;
   color: #021725;
   padding: 17px 30px;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   font-family: 'OpenSansLight';
   font-size: 14px; }
+  .content div a:hover, .content .story .description a:hover {
+    border: 1px #021725 solid; }
 
 .content .story .description .date, .content .contact div .title {
   font-family: 'OpenSansRegular';

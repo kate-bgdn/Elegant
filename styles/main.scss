@@ -68,14 +68,18 @@ $bg-light-gray: #f9f9f9;
 %link {
     display: inline-block;
     margin: auto;
-    border: 1px $main_color solid;
+    border: 1px transparent solid;
     text-decoration: none;
     color: $main_color;
     padding: 17px 30px;
     cursor: pointer;
+    @include transition(0.3s ease-in-out);
     font: {
         family: 'OpenSansLight';
         size: 14px;
+    }
+    &:hover {
+        border: 1px $main_color solid;
     }
 }
 
