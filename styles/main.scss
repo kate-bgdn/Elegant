@@ -93,12 +93,7 @@ $bg-light-gray: #f9f9f9;
     color: $text-color;
 }
 
-/*@include transform(rotate(0deg))
-  @include transition(0.5s)
-@include max-screen(768px) {
-      font-size: 21px;
-    }
-*/
+
 * {
     padding: 0;
     margin: 0;
